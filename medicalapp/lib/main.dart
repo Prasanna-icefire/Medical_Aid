@@ -20,11 +20,13 @@ class MyLoginPage extends StatefulWidget {
   State createState() => new LoginPageState();
 }
 
-class LoginPageState extends State<MyLoginPage> {
-
-
+class LoginPageState extends State<MyLoginPage> 
+{
+  String _password;
+  String _patientid;
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) 
+  {
       return Scaffold(
         body: Stack(
           fit: StackFit.expand,
@@ -52,12 +54,15 @@ class LoginPageState extends State<MyLoginPage> {
                                                       child: Column(
                 children:[
                   TextFormField(decoration:InputDecoration(
-                    labelText:"Enter Patient Id",
+
+                    labelText:"Enter Name",
                   ),keyboardType: TextInputType.text,
+                  onSaved:(value)=>_patientid=value,
                   ),
                     TextFormField(decoration:InputDecoration(
                     labelText:"Enter Password",
                   ),keyboardType: TextInputType.text,obscureText: true,
+                  onSaved:(value)=>_password=value,
                   ),
                   Padding(padding: const EdgeInsets.only(top:20),),
                   MaterialButton(
@@ -94,8 +99,5 @@ class LoginPageState extends State<MyLoginPage> {
       ),
     ),],
     );
-  }
-
- 
- 
+  } 
 } 
