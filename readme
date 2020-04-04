@@ -6,6 +6,6 @@ The login page is a dummy as of now.Yet to connect with firebase.
 To use this as a flutter Project, simply git clone this repository.
 Go to dialogflow's official website and create an agent along with either a new or existing google project.
 Then hed to the projects repo of Google and under credentials | services create your json file and download it.
-rename this Json as credss.json and add it into the assets folder. Then build and run the app.
+rename this Json as credss.json and add it into the assets folder which you are supposed to create under medicalapp directory. Then build and run the app.
 
 Happy coding!
