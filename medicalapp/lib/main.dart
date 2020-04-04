@@ -21,7 +21,7 @@ class MyLoginPage extends StatefulWidget {
   State createState() => new LoginPageState();
 }
 Future navigateToSubPage(context) async {
-  Navigator.push(context, MaterialPageRoute(builder: (context) => SubPage()));
+  Navigator.push(context, MaterialPageRoute(builder: (context) => FlutterFactsDialogFlow()));
 }
 
 class LoginPageState extends State<MyLoginPage> 
@@ -201,7 +201,7 @@ class _FlutterFactsDialogFlowState extends State<FlutterFactsDialogFlow>
   void _dialogFlowResponse(query) async
 {
    _textController.clear();
-  AuthGoogle authGoogle = await AuthGoogle(fileJson: "assets/creds.json").build();
+  AuthGoogle authGoogle = await AuthGoogle(fileJson: "assets/credss.json").build();
   Dialogflow dialogFlow = Dialogflow(authGoogle: authGoogle, language: Language.english);
   AIResponse response = await dialogFlow.detectIntent(query);
   FactsMessage message = FactsMessage(
@@ -222,7 +222,7 @@ class _FlutterFactsDialogFlowState extends State<FlutterFactsDialogFlow>
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("When your happy and you know clap your hands!"),
+        title: Text("Happy!"),
       ),
       body: Column(children: <Widget>[
         Flexible(

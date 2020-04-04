@@ -44,7 +44,7 @@ flutter:
     - images/dark.jpg
     - images/icefire.png
     - images/wallpaper.jpg
-    - assets/creds.json
+    - assets/credss.json
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
