@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_dialogflow/dialogflow_v2.dart';
 
 void main() => runApp(MyApp());
 
@@ -91,7 +91,7 @@ class LoginPageState extends State<MyLoginPage>
        ],
      ),
     );
-  }
+   }
   
   Widget formm()
   {
@@ -107,7 +107,7 @@ class LoginPageState extends State<MyLoginPage>
     ),],
     );
   } 
-}
+}  //THIS CLOSES THE LOGIN PAGE
 
 
 //From here I am building the sub Page
@@ -220,6 +220,24 @@ class _FlutterFactsDialogFlowState extends State<FlutterFactsDialogFlow>
     });
   _dialogFlowResponse(text);
   }
+  void _dialogFlowResponse(query) async
+{
+   _textController.clear();
+  AuthGoogle authGoogle =
+  await AuthGoogle(fileJson: "assets/flutter-to-fly-creds.json").build();
+  Dialogflow dialogFlow = Dialogflow(authGoogle: authGoogle, language: Language.english);
+  AIResponse response = await dialogFlow.detectIntent(query);
+  FactsMessage message = FactsMessage(
+    text: response.getMessage() ??
+         CardDialogflow(response.getList Message()[0]).title,
+    name: "Flutter Bot",
+    type: false,
+  );
+  setState(()
+  {
+    _messages.insert(0, message);
+  });
+}
   
   final List<FactsMessage> _messages = <FactsMessage>[];
   @override
@@ -252,6 +270,7 @@ class FactsMessage extends StatelessWidget {
   final String text;
   final String name;
   final bool type;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -305,23 +324,7 @@ List<Widget> botMessage(context) {
   ];
 }   
 } 
-void _dialogFlowResponse(query) async {
-  _textController.clear();
-  AuthGoogle authGoogle =
-  await AuthGoogle(fileJson: "assets/flutter-to-fly-creds.json").build();
-  Dialogflow dialogFlow =
-  Dialogflow(authGoogle: authGoogle, language: Language.english);
-  AIResponse response = await dialogFlow.detectIntent(query);
-  FactsMessage message = FactsMessage(
-    text: response.getMessage() ??
-         CardDialogflow(response.getListMessage()[0]).title,
-    name: "Flutter Bot",
-    type: false,
-  );
-  setState(() {
-    _messages.insert(0, message);
-  });
-}
+
 
   
 
