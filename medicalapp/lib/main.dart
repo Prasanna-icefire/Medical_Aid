@@ -228,8 +228,8 @@ class _FlutterFactsDialogFlowState extends State<FlutterFactsDialogFlow>
   Dialogflow dialogFlow = Dialogflow(authGoogle: authGoogle, language: Language.english);
   AIResponse response = await dialogFlow.detectIntent(query);
   FactsMessage message = FactsMessage(
-    text: response.getMessage() ??
-         CardDialogflow(response.getList Message()[0]).title,
+    text: response.getMessage()??
+         CardDialogflow(response.getListMessage()[0]).title,
     name: "Flutter Bot",
     type: false,
   );
