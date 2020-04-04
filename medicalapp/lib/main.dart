@@ -93,21 +93,7 @@ class LoginPageState extends State<MyLoginPage>
     );
    }
   
-  Widget formm()
-  {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children:[Form(child:
-      TextFormField(
-        decoration: InputDecoration(
-          hintText: "Enter Name",
-        ),
-        keyboardType: TextInputType.text,
-      ),
-    ),],
-    );
-  } 
-}  //THIS CLOSES THE LOGIN PAGE
+  }  //THIS CLOSES THE LOGIN PAGE
 
 
 //From here I am building the sub Page
@@ -124,21 +110,23 @@ class SubPage extends StatelessWidget
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Click button to back to Main Page'),
-            RaisedButton(
-              textColor: Colors.white,
-              color: Colors.redAccent,
-              child: Text('Back to Main Page'),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            )
+              factBot(context),
           ],
         ),
       ),
     );
   }
 } 
+const String FACTS_DIALOGFLOW = "FACTS_DIALOGFLOW";
+Route<dynamic> generateRoute(RouteSettings routeSettings) {
+  switch(routeSettings.name) {
+    case '/':
+      return MaterialPageRoute(builder: (context) => MyLoginPage());
+      break;
+    case FACTS_DIALOGFLOW:
+      return MaterialPageRoute(builder: (context) => FlutterFactsDialogFlow());
+  }
+}
 Widget factBot(BuildContext context) {
   return Container(
     alignment: Alignment.bottomRight,
@@ -152,21 +140,11 @@ Widget factBot(BuildContext context) {
         onPressed: () => Navigator.pushNamed(context, FACTS_DIALOGFLOW),
       )
   );
+  
 }
 
 //from here the chatbot page
-const String FACTS_DIALOGFLOW = "FACTS_DIALOGFLOW";
 
-Route<dynamic> generateRoute(RouteSettings routeSettings) {
-  switch(routeSettings.name) {
-    case '/':
-      return MaterialPageRoute(builder: (context) => MyLoginPage());
-      break;
-    case FACTS_DIALOGFLOW:
-      return MaterialPageRoute(builder: (context) => FlutterFactsDialogFlow());
-
-  }
-}
 
 
 class FlutterFactsDialogFlow extends StatefulWidget {
@@ -212,7 +190,7 @@ class _FlutterFactsDialogFlowState extends State<FlutterFactsDialogFlow>
   _textController.clear();
   FactsMessage message = new FactsMessage(
     text: text,
-    name: "Priyanka",
+    name: "yolo",
     type: true,
     );
   setState(() {
@@ -223,14 +201,13 @@ class _FlutterFactsDialogFlowState extends State<FlutterFactsDialogFlow>
   void _dialogFlowResponse(query) async
 {
    _textController.clear();
-  AuthGoogle authGoogle =
-  await AuthGoogle(fileJson: "assets/flutter-to-fly-creds.json").build();
+  AuthGoogle authGoogle = await AuthGoogle(fileJson: "assets/creds.json").build();
   Dialogflow dialogFlow = Dialogflow(authGoogle: authGoogle, language: Language.english);
   AIResponse response = await dialogFlow.detectIntent(query);
   FactsMessage message = FactsMessage(
     text: response.getMessage()??
          CardDialogflow(response.getListMessage()[0]).title,
-    name: "Flutter Bot",
+    name: "Bot to help you!",
     type: false,
   );
   setState(()

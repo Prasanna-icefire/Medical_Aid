@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "ferry-dmqupo",
+  "private_key_id": "b03c2bfafe55f2dfa112febee3e6da90c3cff7ca",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCavy4Lbah6TGqt\ns5aJBg8mN7aG2kws+WRzdmCVyX0PC0XutNGat2Lc+MgzQyjSt7k/tQC6iWo1gslu\nflPHDWSFbgLiibBn64sSW6ZeRV4Lv8jH3l+efcxBRLJXbyYanj9fcAKEbqci5kzW\nfC0SSJiUzroi5gH+vN/ppQVFwhrfSUeRkuCq8Dub70sjmZLvwa7vwcV2BRv/+H6n\nHcQYNpPmhr+bG26QeRpP5RMwzDjxOXl+uDicSqvmJW+cRKoOyEr05vQLaL6nxw5c\ntPr5rOlpLjZH2KOaIThIzhL7Pq/x0d81d/Yu4E326u+sgfrVK8vmX7CB2g+toOr5\npUTx5u83AgMBAAECggEAAm1UFeIGFQCGfggQRV09E13R4yvLVdfpStz6VUYzoSfG\ncSDJj3sZhDAsDXKqGVv4/iuUs62cvEge9qpbAc4dadSN/0BDJwqNCxIcsuNfaa8Y\nekyzIMjpbcQxEFQASf5dn2vpGN0WijfsCUNicECj5qteC8iFve6+4TIGnbMkqzK7\njptT+jA3ZgBBHSBpX0qxm7CU9dphHtEy/wjaPlfqMkCTSivMfFBdPz29sOPDQJhT\nT7h964kXHnnlo5odXTK73ed00i/Zh0HrqMhRkfFPUsszwgx1idcd60QYvoQBLRL0\npTcxp3axMHs5vJH1IWATD06uB9cGFd8Q0edZUdGh0QKBgQDS7HWH2OKvOsFD8uHx\ny8ob8tZSDwpGZTle8KaIG+uIavNmhM7CYFCSjXoMg5wcI2TLetYVlZyJB5SzPnq1\n94CNYlkePPZnvWtcEPETpvPT9rScW//szV8foX8pd/x+TRrTQYHYGGIuUin0qw7X\nA/JPA68pSyCrvLG7GfAi6Y5ISQKBgQC70U8RUvWajJoIng9BWy9xTDzXG/w5gl7Q\nZmQZPDSNCEPZBpZI0Ktrtu/YHMML+RPhOc+hWFb4Y5yUJPSFw9mynwl2UFdYtxRg\ng509dV8U0AQhtDnIL80ymSLMotAJsTC12SiuJ3PqcO4ktDVdtWr4C2fUtMmR4FIc\nWDUsluZ7fwKBgDF5HSg8Cw+m7GYPtkeM0V802mhs9rAEViyarbUHN3vL+kN1qzmU\nddGqNZJx3FANTTsdGNH/QbQyfwJ8CTRdVV3UT6r0CafTmjcCEknVwyNYnox+V80n\nbsRwkO8dIbBOTZh3qQkSzxSmWQj2hoiQeGloJ9G7uXIO1HFaaCUIO0NhAoGAEzuI\nxDZhjhTtxQoid8fVoN10sXZdKqpt+RszDt56ZyK8h+HDy+sKUrpl7xRq6LP11C9u\nUpBQP5k7tHPgUj5O8ZqVhncNqrj8rjFsDZoSRXhTo/vnmtdCRPcneBsIAKYTXdvB\n7at+lDhCOqH1gQYN0R6h4EcvCPAWmG5z63/8VBMCgYBEbnZl4T/0Ix5419racLHC\nSA/458Fg3QEm3dtFt6xm2naINRGXbbybeJqVOrmleEkwSJNwxL8f2Xhu6CXy+j1E\nrleFyeebcQrnzkIzQPwLqJuqRMqQVO/31KRPq2f8fJ9ONupFGl4HrokXi0wnQXk0\nRJevJVszFOA88GA433J6DQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "dialogflow-integration@ferry-dmqupo.iam.gserviceaccount.com",
+  "client_id": "113100631184683957464",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dialogflow-integration%40ferry-dmqupo.iam.gserviceaccount.com"
+}
